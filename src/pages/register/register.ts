@@ -21,4 +21,13 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
 
+  async doRegister(user: User) {
+    try {
+      const result = await this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+      console.log(result);
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
 }
