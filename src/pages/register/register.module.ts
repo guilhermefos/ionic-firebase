@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { IonicPageModule } from 'ionic-angular';
 import { RegisterPage } from './register';
+import { NgModule } from '@angular/core';
+
 
 @NgModule({
   declarations: [
@@ -8,6 +10,7 @@ import { RegisterPage } from './register';
   ],
   imports: [
     IonicPageModule.forChild(RegisterPage),
+    AngularFireAuthModule,
   ],
 })
 export class RegisterPageModule {}
