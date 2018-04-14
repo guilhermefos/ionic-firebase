@@ -17,12 +17,12 @@
 
     <ion-item>
       <ion-label color="primary" floating>Email</ion-label>
-      <ion-input clearInput type="email"></ion-input>
+      <ion-input clearInput type="email" [(ngModel)]="user.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="primary" floating>Senha</ion-label>
-      <ion-input clearInput type="password"></ion-input>
+      <ion-input clearInput type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
 
   </ion-list>
