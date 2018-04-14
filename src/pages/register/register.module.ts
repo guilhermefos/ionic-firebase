@@ -12,5 +12,8 @@ import { NgModule } from '@angular/core';
     IonicPageModule.forChild(RegisterPage),
     AngularFireAuthModule,
   ],
+  exports: [
+    RegisterPage,
+  ]
 })
 export class RegisterPageModule {}
