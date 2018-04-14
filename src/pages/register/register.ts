@@ -5,8 +5,8 @@ import {  User } from '../../models/user';
 
 @IonicPage()
 @Component({
-  selector: 'page-register',
   templateUrl: 'register.html',
+  selector: 'page-register',
 })
 export class RegisterPage {
   user = {} as User;
