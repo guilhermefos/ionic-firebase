@@ -33,4 +33,13 @@ export class RegisterPage {
     }
   }
 
+  async doClose() {
+    try {
+      await this.navCtrl.setRoot('LoginPage');
+    } catch(error) {
+      console.log(error);
+    }
+    
+  }
+
 }
