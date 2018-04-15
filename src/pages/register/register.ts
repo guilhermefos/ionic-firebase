@@ -1,7 +1,7 @@
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
-import {  User } from '../../models/user';
+import { User } from '../../models/user';
 
 @IonicPage()
 @Component({
@@ -27,19 +27,30 @@ export class RegisterPage {
                                 .auth
                                 .createUserWithEmailAndPassword(user.email, 
                                                                 user.password);
+
+      if (result) {
+        this.clearFields();
+      }
+      
       console.log(result);
     } catch(error) {
       console.log(error);
     }
   }
 
+  clearFields() {
+    this.user.email = null;
+    this.user.password = null;
+  }
+
   async doClose() {
     try {
-      await this.navCtrl.setRoot('LoginPage');
+    const result =  await this.navCtrl
+                              .setRoot('LoginPage');
+      console.log(result);
     } catch(error) {
       console.log(error);
     }
-    
   }
 
 }
