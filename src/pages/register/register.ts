@@ -28,10 +28,10 @@ export class RegisterPage {
                                 .createUserWithEmailAndPassword(user.email, 
                                                                 user.password);
 
-      if (result) {
+      if (result && result.email) {
         this.clearFields();
       }
-      
+
       console.log(result);
     } catch(error) {
       console.log(error);
